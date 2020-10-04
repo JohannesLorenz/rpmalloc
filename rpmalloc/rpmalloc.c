@@ -121,6 +121,9 @@
 #    define WIN32_LEAN_AND_MEAN
 #  endif
 #  include <windows.h>
+extern DWORD FlsAlloc(PFLS_CALLBACK_FUNCTION lpCallback);
+extern BOOL FlsFree(DWORD dwFlsIndex);
+extern BOOL FlsSetValue(DWORD dwFlsIndex, PVOID lpFlsData);
 #  if ENABLE_VALIDATE_ARGS
 #    include <intsafe.h>
 #  endif
